@@ -141,11 +141,9 @@
       //      Don't fire in text-accepting inputs that we didn't directly bind to
       if (jQuery.hotkeys.options.filterTextInputs &&
             jQuery.inArray(event.target.type, jQuery.hotkeys.textAcceptingInputTypes) > -1) {
-              console.log("returned");
+              
         return;
       }
-
-console.log("gofurther");
 
       var special = event.type !== "keypress" && jQuery.hotkeys.specialKeys[event.which],
         character = String.fromCharCode(event.which).toLowerCase(),
