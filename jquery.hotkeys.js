@@ -139,9 +139,8 @@
 
     handleObj.handler = function(event) {
       //      Don't fire in text-accepting inputs that we didn't directly bind to
-      if (this !== event.target ||
-          (jQuery.hotkeys.options.filterTextInputs &&
-            jQuery.inArray(event.target.type, jQuery.hotkeys.textAcceptingInputTypes) > -1)) {
+      if (jQuery.hotkeys.options.filterTextInputs &&
+            jQuery.inArray(event.target.type, jQuery.hotkeys.textAcceptingInputTypes) > -1) {
         return;
       }
 
